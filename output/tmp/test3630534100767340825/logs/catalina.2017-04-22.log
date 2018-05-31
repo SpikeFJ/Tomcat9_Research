@@ -1,0 +1,332 @@
+22-Apr-2017 15:39:55.162 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testProgrammatic]
+22-Apr-2017 15:39:56.154 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-127.0.0.1-auto-1"]
+22-Apr-2017 15:39:56.243 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Apr-2017 15:39:56.247 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service Tomcat
+22-Apr-2017 15:39:56.247 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/@VERSION@
+22-Apr-2017 15:39:56.829 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-127.0.0.1-auto-1-17971]
+22-Apr-2017 15:39:57.146 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-127.0.0.1-auto-1-17971"]
+22-Apr-2017 15:39:57.198 信息 [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Tomcat
+22-Apr-2017 15:39:57.284 信息 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-127.0.0.1-auto-1-17971"]
+22-Apr-2017 15:39:57.287 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-1-17971"]
+22-Apr-2017 15:39:57.322 严重 [main] org.apache.catalina.startup.ExpandWar.deleteDir [C:\workspace\Tomcat9\output\tmp\test3630534100767340825\logs] could not be completely deleted. The presence of the remaining files may cause problems
+22-Apr-2017 15:39:57.322 严重 [main] org.apache.catalina.startup.ExpandWar.deleteDir [C:\workspace\Tomcat9\output\tmp\test3630534100767340825] could not be completely deleted. The presence of the remaining files may cause problems
+22-Apr-2017 15:39:57.327 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testGetDefaultContextPerAddWebapp]
+22-Apr-2017 15:39:57.394 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-2"]
+22-Apr-2017 15:39:57.399 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testGetCustomContextPerAddWebappWithHost]
+22-Apr-2017 15:39:57.431 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-3"]
+22-Apr-2017 15:39:57.435 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testGetWebappConfigFileFromJarNegative]
+22-Apr-2017 15:39:57.444 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-4"]
+22-Apr-2017 15:39:57.449 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testGetWebappConfigFileFromJar]
+22-Apr-2017 15:39:57.454 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-5"]
+22-Apr-2017 15:39:57.458 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testGetWebappConfigFileFromDirectoryNegative]
+22-Apr-2017 15:39:57.463 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-6"]
+22-Apr-2017 15:39:57.468 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testSingleWebapp]
+22-Apr-2017 15:39:57.472 警告 [main] org.apache.catalina.startup.Tomcat.getWebappConfigFileFromJar Unable to determine web application context.xml C:\workspace\Tomcat9\output\build\webapps\examples
+ java.io.FileNotFoundException: C:\workspace\Tomcat9\output\build\webapps\examples (系统找不到指定的路径。)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.catalina.startup.Tomcat.getWebappConfigFileFromJar(Tomcat.java:1210)
+	at org.apache.catalina.startup.Tomcat.getWebappConfigFile(Tomcat.java:1190)
+	at org.apache.catalina.startup.Tomcat.addWebapp(Tomcat.java:584)
+	at org.apache.catalina.startup.Tomcat.addWebapp(Tomcat.java:564)
+	at org.apache.catalina.startup.TestTomcat.testSingleWebapp(TestTomcat.java:207)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+22-Apr-2017 15:39:57.485 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-127.0.0.1-auto-7"]
+22-Apr-2017 15:39:57.486 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Apr-2017 15:39:57.486 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service Tomcat
+22-Apr-2017 15:39:57.487 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/@VERSION@
+22-Apr-2017 15:39:57.501 严重 [Tomcat-startStop-1] org.apache.catalina.core.ContainerBase.startInternal A child container failed during start
+ java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@234753f9]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:939)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:890)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1404)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@234753f9]
+	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:441)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4832)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4964)
+	... 7 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\workspace\Tomcat9\output\build\webapps\examples] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	... 9 more
+
+22-Apr-2017 15:39:57.502 严重 [main] org.apache.catalina.core.ContainerBase.startInternal A child container failed during start
+ java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: A child container failed during start
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:939)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:342)
+	at org.apache.catalina.startup.TomcatBaseTest$TomcatWithFastSessionIDs.start(TomcatBaseTest.java:828)
+	at org.apache.catalina.startup.TestTomcat.testSingleWebapp(TestTomcat.java:210)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:947)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:890)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1404)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+22-Apr-2017 15:39:57.503 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-127.0.0.1-auto-7-17981"]
+22-Apr-2017 15:39:57.503 信息 [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Tomcat
+22-Apr-2017 15:39:57.504 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-7-17981"]
+22-Apr-2017 15:39:57.546 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testJsps]
+22-Apr-2017 15:39:57.550 警告 [main] org.apache.catalina.startup.Tomcat.getWebappConfigFileFromJar Unable to determine web application context.xml C:\workspace\Tomcat9\output\build\webapps\examples
+ java.io.FileNotFoundException: C:\workspace\Tomcat9\output\build\webapps\examples (系统找不到指定的路径。)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.catalina.startup.Tomcat.getWebappConfigFileFromJar(Tomcat.java:1210)
+	at org.apache.catalina.startup.Tomcat.getWebappConfigFile(Tomcat.java:1190)
+	at org.apache.catalina.startup.Tomcat.addWebapp(Tomcat.java:584)
+	at org.apache.catalina.startup.Tomcat.addWebapp(Tomcat.java:564)
+	at org.apache.catalina.startup.TestTomcat.testJsps(TestTomcat.java:224)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+22-Apr-2017 15:39:57.552 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-127.0.0.1-auto-8"]
+22-Apr-2017 15:39:57.555 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Apr-2017 15:39:57.555 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service Tomcat
+22-Apr-2017 15:39:57.555 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/@VERSION@
+22-Apr-2017 15:39:57.574 严重 [Tomcat-startStop-1] org.apache.catalina.core.ContainerBase.startInternal A child container failed during start
+ java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@40664ffe]
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:939)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:890)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1404)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@40664ffe]
+	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:441)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4832)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4964)
+	... 7 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\workspace\Tomcat9\output\build\webapps\examples] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	... 9 more
+
+22-Apr-2017 15:39:57.575 严重 [main] org.apache.catalina.core.ContainerBase.startInternal A child container failed during start
+ java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: A child container failed during start
+	at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	at java.util.concurrent.FutureTask.get(FutureTask.java:192)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:939)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:422)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:793)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:342)
+	at org.apache.catalina.startup.TomcatBaseTest$TomcatWithFastSessionIDs.start(TomcatBaseTest.java:828)
+	at org.apache.catalina.startup.TestTomcat.testJsps(TestTomcat.java:228)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.apache.catalina.LifecycleException: A child container failed during start
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:947)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:890)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1404)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+22-Apr-2017 15:39:57.576 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-127.0.0.1-auto-8-17984"]
+22-Apr-2017 15:39:57.578 信息 [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Tomcat
+22-Apr-2017 15:39:57.579 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-8-17984"]
+22-Apr-2017 15:39:57.587 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testGetWebappConfigFileFromDirectory]
+22-Apr-2017 15:39:57.593 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-9"]
+22-Apr-2017 15:39:57.598 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testBug50826]
+22-Apr-2017 15:39:57.602 警告 [main] org.apache.catalina.startup.Tomcat.getWebappConfigFileFromJar Unable to determine web application context.xml C:\workspace\Tomcat9\output\build\webapps\examples
+ java.io.FileNotFoundException: C:\workspace\Tomcat9\output\build\webapps\examples (系统找不到指定的路径。)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.catalina.startup.Tomcat.getWebappConfigFileFromJar(Tomcat.java:1210)
+	at org.apache.catalina.startup.Tomcat.getWebappConfigFile(Tomcat.java:1190)
+	at org.apache.catalina.startup.Tomcat.addWebapp(Tomcat.java:584)
+	at org.apache.catalina.startup.Tomcat.addWebapp(Tomcat.java:564)
+	at org.apache.catalina.startup.TestTomcat.testBug50826(TestTomcat.java:361)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:55)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+22-Apr-2017 15:39:57.602 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-10"]
+22-Apr-2017 15:39:57.608 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testBug51526]
+22-Apr-2017 15:39:57.616 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-127.0.0.1-auto-11"]
+22-Apr-2017 15:39:57.618 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Apr-2017 15:39:57.618 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service Tomcat
+22-Apr-2017 15:39:57.619 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/@VERSION@
+22-Apr-2017 15:39:57.973 信息 [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.getDefaultWebXmlFragment No global web.xml found

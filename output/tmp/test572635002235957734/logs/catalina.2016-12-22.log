@@ -1,0 +1,12 @@
+22-Dec-2016 10:57:44.423 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [testBug58232]
+22-Dec-2016 10:57:46.534 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-127.0.0.1-auto-1"]
+22-Dec-2016 10:57:46.658 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Dec-2016 10:57:46.678 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service Tomcat
+22-Dec-2016 10:57:46.678 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/@VERSION@
+22-Dec-2016 10:57:47.853 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-127.0.0.1-auto-1-11610]
+22-Dec-2016 10:57:49.012 信息 [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-127.0.0.1-auto-1-11610"]
+22-Dec-2016 10:57:49.066 信息 [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Tomcat
+22-Dec-2016 10:57:49.122 信息 [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-127.0.0.1-auto-1-11610"]
+22-Dec-2016 10:57:49.124 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-1-11610"]
+22-Dec-2016 10:57:49.159 严重 [main] org.apache.catalina.startup.ExpandWar.deleteDir [C:\workspace\Tomcat9\output\tmp\test572635002235957734\logs] could not be completely deleted. The presence of the remaining files may cause problems
+22-Dec-2016 10:57:49.160 严重 [main] org.apache.catalina.startup.ExpandWar.deleteDir [C:\workspace\Tomcat9\output\tmp\test572635002235957734] could not be completely deleted. The presence of the remaining files may cause problems

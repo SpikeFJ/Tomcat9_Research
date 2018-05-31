@@ -1,0 +1,9 @@
+14-Apr-2017 15:26:53.997 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [bug58086a]
+14-Apr-2017 15:26:55.044 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-1"]
+14-Apr-2017 15:26:55.091 严重 [main] org.apache.catalina.startup.ExpandWar.deleteDir [C:\workspace\Tomcat9\output\tmp\test1007299623908597604\logs] could not be completely deleted. The presence of the remaining files may cause problems
+14-Apr-2017 15:26:55.092 严重 [main] org.apache.catalina.startup.ExpandWar.deleteDir [C:\workspace\Tomcat9\output\tmp\test1007299623908597604] could not be completely deleted. The presence of the remaining files may cause problems
+14-Apr-2017 15:26:55.096 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [bug58086b]
+14-Apr-2017 15:26:55.100 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-2"]
+14-Apr-2017 15:26:55.104 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [bug58086c]
+14-Apr-2017 15:26:55.108 信息 [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-127.0.0.1-auto-3"]
+14-Apr-2017 15:26:55.112 信息 [main] org.apache.catalina.startup.LoggingBaseTest.setUp Starting test case [bug58086d]
