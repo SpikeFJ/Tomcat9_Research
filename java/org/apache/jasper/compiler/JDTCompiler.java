@@ -310,20 +310,20 @@ public class JDTCompiler extends org.apache.jasper.compiler.Compiler {
                 settings.put(CompilerOptions.OPTION_Source,
                              CompilerOptions.VERSION_1_7);
             } else if(opt.equals("1.8")) {
-                settings.put(CompilerOptions.OPTION_Source,
-                             CompilerOptions.VERSION_1_8);
+//                settings.put(CompilerOptions.OPTION_Source,
+//                             CompilerOptions.VERSION_1_8);
             } else if(opt.equals("1.9")) {
-                settings.put(CompilerOptions.OPTION_Source,
-                             CompilerOptions.VERSION_1_9);
+//                settings.put(CompilerOptions.OPTION_Source,
+//                             CompilerOptions.VERSION_1_9);
             } else {
                 log.warn("Unknown source VM " + opt + " ignored.");
-                settings.put(CompilerOptions.OPTION_Source,
-                        CompilerOptions.VERSION_1_8);
+//                settings.put(CompilerOptions.OPTION_Source,
+//                        CompilerOptions.VERSION_1_8);
             }
         } else {
             // Default to 1.8
-            settings.put(CompilerOptions.OPTION_Source,
-                    CompilerOptions.VERSION_1_8);
+//            settings.put(CompilerOptions.OPTION_Source,
+//                    CompilerOptions.VERSION_1_8);
         }
 
         // Target JVM
@@ -357,26 +357,26 @@ public class JDTCompiler extends org.apache.jasper.compiler.Compiler {
                 settings.put(CompilerOptions.OPTION_Compliance,
                         CompilerOptions.VERSION_1_7);
             } else if(opt.equals("1.8")) {
-                settings.put(CompilerOptions.OPTION_TargetPlatform,
-                             CompilerOptions.VERSION_1_8);
-                settings.put(CompilerOptions.OPTION_Compliance,
-                        CompilerOptions.VERSION_1_8);
+//                settings.put(CompilerOptions.OPTION_TargetPlatform,
+//                             CompilerOptions.VERSION_1_8);
+//                settings.put(CompilerOptions.OPTION_Compliance,
+//                        CompilerOptions.VERSION_1_8);
             } else if(opt.equals("1.9")) {
-                settings.put(CompilerOptions.OPTION_TargetPlatform,
-                             CompilerOptions.VERSION_1_9);
-                settings.put(CompilerOptions.OPTION_Compliance,
-                        CompilerOptions.VERSION_1_9);
+//                settings.put(CompilerOptions.OPTION_TargetPlatform,
+//                             CompilerOptions.VERSION_1_9);
+//                settings.put(CompilerOptions.OPTION_Compliance,
+//                        CompilerOptions.VERSION_1_9);
             } else {
                 log.warn("Unknown target VM " + opt + " ignored.");
-                settings.put(CompilerOptions.OPTION_TargetPlatform,
-                        CompilerOptions.VERSION_1_8);
+//                settings.put(CompilerOptions.OPTION_TargetPlatform,
+//                        CompilerOptions.VERSION_1_8);
             }
         } else {
             // Default to 1.8
-            settings.put(CompilerOptions.OPTION_TargetPlatform,
-                    CompilerOptions.VERSION_1_8);
-            settings.put(CompilerOptions.OPTION_Compliance,
-                    CompilerOptions.VERSION_1_8);
+//            settings.put(CompilerOptions.OPTION_TargetPlatform,
+//                    CompilerOptions.VERSION_1_8);
+//            settings.put(CompilerOptions.OPTION_Compliance,
+//                    CompilerOptions.VERSION_1_8);
         }
 
         final IProblemFactory problemFactory =
