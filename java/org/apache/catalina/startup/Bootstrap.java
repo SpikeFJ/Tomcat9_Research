@@ -61,11 +61,12 @@ public final class Bootstrap {
 
     private static final Pattern PATH_PATTERN = Pattern.compile("(\".*?\")|(([^,])*)");
 
+    //Step1.设置catalina.home、catalina.base属性
     static {
-        //1��C:\workspace\Tomcat9
+        //当前工作目录：D:\workspace\Tomcat9_Research
         String userDir = System.getProperty("user.dir");
 
-        // Home first
+        //读取系统变量catalina.home
         String home = System.getProperty(Globals.CATALINA_HOME_PROP);
         File homeFile = null;
 
@@ -78,12 +79,13 @@ public final class Bootstrap {
             }
         }
 
-        //2��C:\workspace\Tomcat9\bootstrap.jar������Ƿ�binĿ¼
+        //判断D:\workspace\Tomcat9_Research\bootstrap.jar是否存在，来确定是否bin文件夹
         if (homeFile == null) {
             // First fall-back. See if current directory is a bin directory
             // in a normal Tomcat install
             File bootstrapJar = new File(userDir, "bootstrap.jar");
 
+            //如果存在，则找到上级目录
             if (bootstrapJar.exists()) {
                 File f = new File(userDir, "..");
                 try {
@@ -94,7 +96,7 @@ public final class Bootstrap {
             }
         }
 
-        //3�����õ�ǰĿ¼
+        //3.采用当前工作目录
         if (homeFile == null) {
             // Second fall-back. Use current directory
             File f = new File(userDir);
@@ -109,7 +111,7 @@ public final class Bootstrap {
         System.setProperty(
                 Globals.CATALINA_HOME_PROP, catalinaHomeFile.getPath());
 
-        // Then base
+        // catalina.base属性用于tomcat运行单程序、多实例；默认catalina.base=catalina.home单程序单实例
         String base = System.getProperty(Globals.CATALINA_BASE_PROP);
         if (base == null) {
             catalinaBaseFile = catalinaHomeFile;
@@ -143,32 +145,12 @@ public final class Bootstrap {
     // -------------------------------------------------------- Private Methods
 
 
-    private void initClassLoaders() {
-        try {
-            commonLoader = createClassLoader("common", null);
-            if( commonLoader == null ) {
-                // no config file, default to this loader - we might be in a 'single' env.
-                commonLoader=this.getClass().getClassLoader();
-            }
-            catalinaLoader = createClassLoader("server", commonLoader);
-            sharedLoader = createClassLoader("shared", commonLoader);
-        } catch (Throwable t) {
-            handleThrowable(t);
-            log.error("Class loader creation threw exception", t);
-            System.exit(1);
-        }
-    }
-
 
     private ClassLoader createClassLoader(String name, ClassLoader parent)
         throws Exception {
 
     	/**
-    	 * 
-    	 *  "${catalina.base}/lib",
-			"${catalina.base}/lib/*.jar",
-			"${catalina.home}/lib",
-			"${catalina.home}/lib/*.jar
+    	 *  "${catalina.base}/lib","${catalina.base}/lib/*.jar","${catalina.home}/lib","${catalina.home}/lib/*.jar
     	 */
         String value = CatalinaProperties.getProperty(name + ".loader");
         if ((value == null) || (value.equals("")))
@@ -194,16 +176,12 @@ public final class Bootstrap {
 
             // Local repository
             if (repository.endsWith("*.jar")) {
-                repository = repository.substring
-                    (0, repository.length() - "*.jar".length());
-                repositories.add(
-                        new Repository(repository, RepositoryType.GLOB));
+                repository = repository.substring(0, repository.length() - "*.jar".length());
+                repositories.add(new Repository(repository, RepositoryType.GLOB));
             } else if (repository.endsWith(".jar")) {
-                repositories.add(
-                        new Repository(repository, RepositoryType.JAR));
+                repositories.add(new Repository(repository, RepositoryType.JAR));
             } else {
-                repositories.add(
-                        new Repository(repository, RepositoryType.DIR));
+                repositories.add(new Repository(repository, RepositoryType.DIR));
             }
         }
 
@@ -291,6 +269,25 @@ public final class Bootstrap {
 
         catalinaDaemon = startupInstance;
 
+    }
+
+    /**
+     * 初始化classloader
+     */
+    private void initClassLoaders() {
+        try {
+            commonLoader = createClassLoader("common", null);
+            if( commonLoader == null ) {
+                // no config file, default to this loader - we might be in a 'single' env.
+                commonLoader=this.getClass().getClassLoader();
+            }
+            catalinaLoader = createClassLoader("server", commonLoader);
+            sharedLoader = createClassLoader("shared", commonLoader);
+        } catch (Throwable t) {
+            handleThrowable(t);
+            log.error("Class loader creation threw exception", t);
+            System.exit(1);
+        }
     }
 
 
@@ -500,7 +497,7 @@ public final class Bootstrap {
                 daemon.stop();
             } else if (command.equals("start")) {
                 daemon.setAwait(true);//Catalina.SetAwait
-                daemon.load(args);//Catalia.load-->StandadServer��ʼ��
+                daemon.load(args);//Catalia.load-->StandadServer.load
                 daemon.start();
             } else if (command.equals("stop")) {
                 daemon.stopServer(args);

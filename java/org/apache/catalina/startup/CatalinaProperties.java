@@ -56,6 +56,9 @@ public class CatalinaProperties {
 
     /**
      * Load properties.
+     * 1、System.getProperty("catalina.config")
+     * 2、conf/catalina.properties
+     * 3、/org/apache/catalina/startup/catalina.properties
      */
     private static void loadProperties() {
 
