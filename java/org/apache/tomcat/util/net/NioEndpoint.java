@@ -265,6 +265,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
                     socketProperties.getBufferPool());
 
             // Create worker collection
+            //创建工作线程
             if ( getExecutor() == null ) {
                 createExecutor();
             }
@@ -702,8 +703,8 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel> {
          * @param socket    The newly created socket
          */
         public void register(final NioChannel socket) {
-            socket.setPoller(this);
-            NioSocketWrapper ka = new NioSocketWrapper(socket, NioEndpoint.this);
+            socket.setPoller(this);//设置该niochennel所属Poller
+            NioSocketWrapper ka = new NioSocketWrapper(socket, NioEndpoint.this);//NioSocketWrapper作为socket通讯的attchment
             socket.setSocketWrapper(ka);
             ka.setPoller(this);
             ka.setReadTimeout(getSocketProperties().getSoTimeout());

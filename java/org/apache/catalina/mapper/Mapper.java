@@ -1648,7 +1648,7 @@ public final class Mapper {
     protected static final class ContextList {
 
         public final MappedContext[] contexts;
-        public final int nesting;
+        public final int nesting;//所有的context的path中，最多的斜线数目
 
         public ContextList() {
             this(new MappedContext[0], 0);
@@ -1699,11 +1699,11 @@ public final class Mapper {
         public final String path;
         public final int slashCount;
         public final WebResourceRoot resources;
-        public String[] welcomeResources;
-        public MappedWrapper defaultWrapper = null;
-        public MappedWrapper[] exactWrappers = new MappedWrapper[0];
-        public MappedWrapper[] wildcardWrappers = new MappedWrapper[0];
-        public MappedWrapper[] extensionWrappers = new MappedWrapper[0];
+        public String[] welcomeResources;//welCome数据
+        public MappedWrapper defaultWrapper = null;//默认的wrapper
+        public MappedWrapper[] exactWrappers = new MappedWrapper[0];//对wrapper的精确匹配
+        public MappedWrapper[] wildcardWrappers = new MappedWrapper[0];//基于通配符的匹配
+        public MappedWrapper[] extensionWrappers = new MappedWrapper[0];//基于扩展名的匹配
         public int nesting = 0;
         private volatile boolean paused;
 

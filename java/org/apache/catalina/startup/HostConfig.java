@@ -574,6 +574,7 @@ public class HostConfig implements LifecycleListener {
                     docBase = new File(host.getAppBaseFile(), context.getDocBase());
                 }
                 // If external docBase, register .xml as redeploy first
+                //如果部署路径不是本host路径内，则标志isExternal=true
                 if (!docBase.getCanonicalPath().startsWith(
                         host.getAppBaseFile().getAbsolutePath() + File.separator)) {
                     isExternal = true;
@@ -793,9 +794,11 @@ public class HostConfig implements LifecycleListener {
      */
     protected void deployWAR(ContextName cn, File war) {
 
+        //META-INF/context.xml文件
         File xml = new File(host.getAppBaseFile(),
                 cn.getBaseName() + "/" + Constants.ApplicationContextXml);
 
+        ///META-INF/war-tracker
         File warTracker = new File(host.getAppBaseFile(),
                 cn.getBaseName() + "/" + Constants.WarTracker);
 

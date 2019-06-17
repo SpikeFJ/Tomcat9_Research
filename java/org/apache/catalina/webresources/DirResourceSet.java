@@ -85,6 +85,7 @@ public class DirResourceSet extends AbstractFileResourceSet {
         if (getRoot().getState().isAvailable()) {
             try {
                 start();
+
             } catch (LifecycleException e) {
                 throw new IllegalStateException(e);
             }

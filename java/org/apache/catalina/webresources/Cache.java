@@ -198,6 +198,11 @@ public class Cache {
         }
     }
 
+    /**
+     * 是否不需要缓存。/WEB-INF/classes/下的class文件或者/WEB-INF/lib/下的jar文件不需要缓存。
+     * @param path
+     * @return
+     */
     private boolean noCache(String path) {
         // Don't cache classes. The class loader handles this.
         // Don't cache JARs. The ResourceSet handles this.

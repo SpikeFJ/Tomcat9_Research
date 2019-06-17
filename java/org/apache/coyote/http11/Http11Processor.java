@@ -659,11 +659,12 @@ public class Http11Processor extends AbstractProcessor {
         readComplete = true;
         boolean keptAlive = false;
 
+        // 没有错误&& 长连接&& 不是异步servlet&& 不是升级协议&&Socket没有暂停
         while (!getErrorState().isError() && keepAlive && !isAsync() &&
                 upgradeToken == null && !endpoint.isPaused()) {
 
-            // Parsing the request header
             try {
+                //解析报文请求行
                 if (!inputBuffer.parseRequestLine(keptAlive)) {
                     if (inputBuffer.getParsingRequestLinePhase() == -1) {
                         return SocketState.UPGRADING;
@@ -680,6 +681,7 @@ public class Http11Processor extends AbstractProcessor {
                     keptAlive = true;
                     // Set this every time in case limit has been changed via JMX
                     request.getMimeHeaders().setLimit(endpoint.getMaxHeaderCount());
+                    //解析报文请求头
                     if (!inputBuffer.parseHeaders()) {
                         // We've read part of the request, don't recycle it
                         // instead associate it with the socket
@@ -719,7 +721,7 @@ public class Http11Processor extends AbstractProcessor {
                 getAdapter().log(request, response, 0);
             }
 
-            // Has an upgrade been requested?
+            //1.检查报文头中是否有upgrade
             Enumeration<String> connectionValues = request.getMimeHeaders().values("Connection");
             boolean foundUpgrade = false;
             while (connectionValues.hasMoreElements() && !foundUpgrade) {
@@ -971,7 +973,7 @@ public class Http11Processor extends AbstractProcessor {
 
         MimeHeaders headers = request.getMimeHeaders();
 
-        // Check connection header
+        // 1.解析connection
         MessageBytes connectionValueMB = headers.getValue(Constants.CONNECTION);
         if (connectionValueMB != null) {
             ByteChunk connectionValueBC = connectionValueMB.getByteChunk();

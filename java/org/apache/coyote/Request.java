@@ -58,6 +58,14 @@ import org.apache.tomcat.util.res.StringManager;
  * @author Costin Manolache
  * @author Remy Maucherat
  */
+
+/**
+ *  该类是服务端请求的一个偏底层、高性能的抽象。大部分字段都是gc free的，高耗能的操作都延迟到直到用户实际需要相关信息。
+ *  处理操作都通过hook机制委托给相关模块。
+ *
+ *  该类不是为web用户服务的-而是给Tomcat内部高效处理请求的。用户(servlet)可以通过facade模式(以一种高层次的方式)访问
+ *
+ */
 public final class Request {
 
     private static final StringManager sm = StringManager.getManager(Request.class);

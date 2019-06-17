@@ -82,6 +82,14 @@ import java.util.Set;
  * - how to handle PUT when the target is read-only but it could be written to
  *   a higher priority ResourceSet that is read-write
  */
+
+/**
+ * 该类表示一个完整的web项目资源集合。web项目资源包含了多种资源类型，在查找资源文件时，按以下顺序处理：
+ * 1.Pre资源-由wbe的context.xml中<PreResource>定义。按照资源定义的顺序加载
+ * 2.Main资源-web应用目录资源。如war包或者包含解压缩后的war包的所在文件夹
+ * 3.Jar资源-由servelet规范定义，
+ * 4.Post资源-context.xml中<PostResource>定义
+ */
 public interface WebResourceRoot extends Lifecycle {
     /**
      * Obtain the object that represents the resource at the given path. Note

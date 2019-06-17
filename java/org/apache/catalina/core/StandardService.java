@@ -93,11 +93,11 @@ public class StandardService extends LifecycleMBeanBase implements Service {
 
     private ClassLoader parentClassLoader = null;
 
+
     /**
      * Mapper.
      */
     protected final Mapper mapper = new Mapper();
-
 
     /**
      * Mapper listener.
@@ -106,11 +106,11 @@ public class StandardService extends LifecycleMBeanBase implements Service {
 
 
     // ------------------------------------------------------------- Properties
-
     @Override
     public Mapper getMapper() {
         return mapper;
     }
+
 
 
     @Override

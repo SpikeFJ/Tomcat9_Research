@@ -575,6 +575,7 @@ public class StandardRoot extends LifecycleMBeanBase implements WebResourceRoot 
      * or more of the JAR files.
      */
     private void processWebInfLib() {
+        //获取每个WebResourceSet下/WEB-INF/lib目录下jar
         WebResource[] possibleJars = listResources("/WEB-INF/lib", false);
 
         for (WebResource possibleJar : possibleJars) {
@@ -692,8 +693,10 @@ public class StandardRoot extends LifecycleMBeanBase implements WebResourceRoot 
         mainResources.add(main);
 
         for (List<WebResourceSet> list : allResources) {
-            // Skip class resources since they are started below
+            //略过class资源文件，后面会开启
             if (list != classResources) {
+                //此处会将所有的WebResourceSet（DirResourceSet、WarResourceSet）对象依次执行init、start
+                //实际上DirResourceSet、WarResourceSet均未作任何操作
                 for (WebResourceSet webResourceSet : list) {
                     webResourceSet.start();
                 }
@@ -714,9 +717,11 @@ public class StandardRoot extends LifecycleMBeanBase implements WebResourceRoot 
     }
 
     protected WebResourceSet createMainResourceSet() {
+        //获取Context.xml中<docBase>属性
         String docBase = context.getDocBase();
 
         WebResourceSet mainResourceSet;
+        //默认EmptyResourceSet
         if (docBase == null) {
             mainResourceSet = new EmptyResourceSet(this);
         } else {
@@ -724,6 +729,7 @@ public class StandardRoot extends LifecycleMBeanBase implements WebResourceRoot 
             if (!f.isAbsolute()) {
                 f = new File(((Host)context.getParent()).getAppBaseFile(), f.getPath());
             }
+
             if (f.isDirectory()) {
                 mainResourceSet = new DirResourceSet(this, "/", f.getAbsolutePath(), "/");
             } else if(f.isFile() && docBase.endsWith(".war")) {

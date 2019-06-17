@@ -269,7 +269,9 @@ public class Catalina {
         long t1=System.currentTimeMillis();
         // Initialize the digester
         Digester digester = new Digester();
+        //解析xml时不需要进行DTD的规则校验
         digester.setValidating(false);
+        //节点设置规则校验
         digester.setRulesValidation(true);
         HashMap<Class<?>, List<String>> fakeAttributes = new HashMap<>();
         ArrayList<String> attrs = new ArrayList<>();
@@ -278,15 +280,19 @@ public class Catalina {
         digester.setFakeAttributes(fakeAttributes);
         digester.setUseContextClassLoader(true);
 
-        // Configure the actions we will be using
+        // 解析xml时遇到<Server>节点则生成org.apache.catalina.core.StandardServer对象，className可以自定义MyServer对象类
         digester.addObjectCreate("Server",
                                  "org.apache.catalina.core.StandardServer",
                                  "className");
+        //设置Server节点对应的对象的相关属性
         digester.addSetProperties("Server");
+
+        //调用栈顶对象的setServer方法，Server节点对应的对象作为入参
         digester.addSetNext("Server",
                             "setServer",
                             "org.apache.catalina.Server");
 
+        //<server><GlobalNamingResources>生成NamingResourcesImpl对象，
         digester.addObjectCreate("Server/GlobalNamingResources",
                                  "org.apache.catalina.deploy.NamingResourcesImpl");
         digester.addSetProperties("Server/GlobalNamingResources");
@@ -294,6 +300,7 @@ public class Catalina {
                             "setGlobalNamingResources",
                             "org.apache.catalina.deploy.NamingResourcesImpl");
 
+        //形如<Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
         digester.addObjectCreate("Server/Listener",
                                  null, // MUST be specified in the element
                                  "className");

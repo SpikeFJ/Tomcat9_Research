@@ -539,6 +539,7 @@ public class CoyoteAdapter implements Adapter {
         // If the processor has set the scheme (AJP does this, HTTP does this if
         // SSL is enabled) use this to set the secure flag as well. If the
         // processor hasn't set it, use the settings from the connector
+        //1.如果没有设置scheme，则采用connector上的（AJP默认使用，https也是)
         if (req.scheme().isNull()) {
             // Use connector scheme and secure configuration, (defaults to
             // "http" and false respectively)
@@ -569,8 +570,9 @@ public class CoyoteAdapter implements Adapter {
 
         MessageBytes undecodedURI = req.requestURI();
 
-        // Check for ping OPTIONS * request
+        // 如果URI是*
         if (undecodedURI.equals("*")) {
+            //如果method不是OPTIONS，则返回404错误
             if (req.method().equalsIgnoreCase("OPTIONS")) {
                 StringBuilder allow = new StringBuilder();
                 allow.append("GET, HEAD, POST, PUT, DELETE");
